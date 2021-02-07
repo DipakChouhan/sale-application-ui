@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FooterComponent } from './footer.component';
+import { VehicleViewModalComponent } from './vehicle-view-modal.component';
 
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+describe('VehicleViewModalComponent', () => {
+  let component: VehicleViewModalComponent;
+  let fixture: ComponentFixture<VehicleViewModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FooterComponent ]
+      declarations: [ VehicleViewModalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FooterComponent);
+    fixture = TestBed.createComponent(VehicleViewModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

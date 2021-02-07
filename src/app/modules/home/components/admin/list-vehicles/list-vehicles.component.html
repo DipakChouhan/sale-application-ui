@@ -1,33 +1,56 @@
 <div class="conatiner-fluid title-style">
-  <div class="remove-pad-marg">
+  <div class="row remove-pad-marg">
     <div class="">
-      <h2>Page name</h2>
+      <h2>View Vehicles</h2>
     </div>
   </div>
 </div>
 <div class="container-width cont-style cont-style-parent">
-    <div class="cont-style-cont">
-      <div class="row remove-pad-marg">
-        <div class="headline col-lg-12 skill-board margin-bottom">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="row">
-                <div class="skill-board-white">
-                  <div class="col-lg-12">
-                    <div class="card-columns">
-                      <div class="card edit-btn" *ngFor="let vehicle of vehicleList">
-                        <button type="button" class="btn btn-default btn-sm editBtn" data-toggle="modal"
-                          data-target=".addUpdateModal">
-                          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                        </button>
-                        <img class="card-img-top" [src]="'http://localhost:8082/images' + vehicle.vehicleMediaModelList[0].vehicleMediaEncodedImage" alt="Card image cap" />
-                        <div class="card-body">
-                          <h5 class="card-title">BMW X3 xDrive</h5>
-                          <h6 class="card-title">$1000</h6>
-                          <span class="card-text">2015</span>
-                          <span class="card-text">50,222km</span>
-                          <span class="card-text">Diesel</span>
-                        </div>
+  <div class="cont-style-cont">
+    <div class="row remove-pad-marg">
+      <div class="headline col-lg-12 skill-board margin-bottom">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="skill-board-white">
+                <div class="col-lg-12">
+                  <div class="card-columns">
+                    <div
+                      class="card edit-btn"
+                      *ngFor="let vehicle of vehicleList"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-default btn-sm editBtn"
+                        data-toggle="modal"
+                        data-target="#vehicleViewModal"
+                        (click)="onViewVehicle(vehicle)"
+                      >
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                      </button>
+                      <img *ngIf="vehicle.vehicleMediaModelList[0] != null && vehicle.vehicleMediaModelList[0] != undefined"
+                        class="card-img-top"
+                        [src]="
+                          'http://localhost:8082/images' +
+                          vehicle.vehicleMediaModelList[0]
+                            .vehicleMediaEncodedImage
+                        "
+                        alt="Card image cap"
+                      />
+                      <div class="card-body">
+                        <h5 class="card-title">{{ vehicle.vehicleName }}</h5>
+                        <h6 class="card-title">
+                          ₹{{ vehicle.vehicleLowerPrice }} - ₹{{
+                            vehicle.vehicleUpperPrice
+                          }}*
+                        </h6>
+                        <span class="card-text"
+                          >{{ vehicle.vehicleYear }} |
+                        </span>
+                        <span class="card-text"
+                          >{{ vehicle.vehicleKmDriven }} Km |
+                        </span>
+                        <span class="card-text">{{ vehicle.vehicleFuel }}</span>
                       </div>
                     </div>
                   </div>
@@ -37,6 +60,9 @@
           </div>
         </div>
       </div>
-      <!-- ------------------------------------------------------------------------------------------------- -->
     </div>
+    <!-- ------------------------------------------------------------------------------------------------- -->
   </div>
+</div>
+
+<app-vehicle-view-modal></app-vehicle-view-modal>

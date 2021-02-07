@@ -12,12 +12,15 @@ export class AdminService {
   getVehicleList() {
     return this.httpClient.get("http://localhost:8082/user/getAllCarDetails?pageNo=0&pageSize=100");
   }
-
-  approveGuestEntry(guestBookEntryId: any) {
-    return this.httpClient.put("http://localhost:8082/admin/approveGuestBookEntries", guestBookEntryId);
+  dummyApiCall() {
+    return this.httpClient.get("http://localhost:8082/user/dummyApiCall");
   }
 
-  deleteGuestEntry(guestBookEntryId: any) {
-    return this.httpClient.post("http://localhost:8082/admin/deleteGuestBookEntries", guestBookEntryId);
+  saveNewVehicleImages(formData: any) {
+    return this.httpClient.post("http://localhost:8082/admin/saveNewVehicleImages", formData);
+  }
+
+  saveNewVehicle(vehicleModel: any) {
+    return this.httpClient.post("http://localhost:8082/admin/saveNewVehicle", vehicleModel);
   }
 }

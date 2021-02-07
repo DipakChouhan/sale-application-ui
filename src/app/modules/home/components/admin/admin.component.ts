@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {GuestService} from "../../../../core/services/guest.service";
 import {Router} from "@angular/router";
+import { AdminService } from 'src/app/core/services/admin.service';
 
 @Component({
   selector: 'app-admin',
@@ -9,13 +9,13 @@ import {Router} from "@angular/router";
 })
 export class AdminComponent implements OnInit {
 
-  constructor(private guestService: GuestService, private router: Router) { }
+  constructor(private adminService: AdminService, private router: Router) { }
 
   ngOnInit(): void {
     // if (localStorage.getItem('role') == null || localStorage.getItem('role') != 'ADMIN') {
     //   this.router.navigate(['/login']);
     // }
-    this.guestService.dummyApiCall().subscribe(responseDate => {});
+    this.adminService.dummyApiCall().subscribe(responseDate => {});
   }
 
 }

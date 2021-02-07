@@ -1,0 +1,9 @@
+table td{
+    border: 0;
+}
+table tr{
+    border-bottom: 1px solid #ccc;
+}
+.modal-dialog {
+    max-width:900px !important;
+}

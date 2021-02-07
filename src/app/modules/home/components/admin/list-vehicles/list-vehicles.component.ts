@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AdminService } from 'src/app/core/services/admin.service';
+import { DataService } from 'src/app/core/services/data.service';
 
 @Component({
   selector: 'app-list-vehicles',
@@ -9,7 +10,7 @@ import { AdminService } from 'src/app/core/services/admin.service';
 export class ListVehiclesComponent implements OnInit {
   vehicleList;
 
-  constructor(private adminService: AdminService) { }
+  constructor(private adminService: AdminService, private dataService: DataService) { }
 
   ngOnInit(): void {
     this.getVehicleList();
@@ -24,5 +25,9 @@ export class ListVehiclesComponent implements OnInit {
     }, error => {
       // this.dataService.buildModelDataObject(null, null, this, null, error.error.errorMessages);
     });
+  }
+
+  onViewVehicle(vehicle: any) {
+    this.dataService.buildModelDataObject(vehicle, 'VIEW', this, null, null);
   }
 }

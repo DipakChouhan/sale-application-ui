@@ -1,322 +1,226 @@
-.container-fluid{
-    overflow: hidden;
-    position: fixed;
-    font-size: .8rem;
+/* You can add global styles to this file, and also import other style files */
+
+.font-c,
+html,
+body {
+  font-family: Barlow;
 }
-.container-width{
-    max-width: 100%;
-    margin: 0px auto;
+.font-h,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Raleway;
+  color: #237dac;
+}
+h4 {
+  font-size: 1.3rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  color: #333;
+}
+p {
+  font-size: 1.5rem;
+}
+a {
+  color: #333;
 }
 
-
-.top-left-nev {
-    padding: 0px 18px;
-    border-bottom: 1px solid #e6efef;
+.float-right {
+  text-align: right;
+}
+.remove-pad-marg {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.remove-pad-top {
+  padding-top: 0px !important;
+}
+.remove-pad-bot {
+  padding-bottom: 0px !important;
+}
+.remove-pad-right {
+  padding-right: 0px !important;
+}
+.remove-pad-left {
+  padding-left: 0px !important;
 }
 
-.remove-pad-marg.h3,
-.remove-pad-marg.h6 {
-    padding: 2px !important;
-    margin: 0px !important;
+.remove-marg-top {
+  margin-top: 0px !important;
+}
+.remove-marg-bot {
+  margin-bottom: 0px !important;
+}
+.remove-marg-right {
+  margin-right: 0px !important;
+}
+.remove-marg-left {
+  margin-left: 0px !important;
 }
 
-.header {
-    height: 81px;
-}
-
-.header-right {
-    height: 81px;
-    float: right;
-    text-align: right;
-    padding: 20px;
-    border-bottom: 1px solid #e6efef;
-}
-
-header .row {
-    height: 81px !important;
-    overflow: hidden;
-}
-
-.header-manu {
-    position: relative !important;
-    margin-bottom: 81px;
-    z-index: 100;
-    overflow: hidden;
-}
-
-.header-manu-fixed {
-    position: fixed;
-    background: #fff;
-}
-
-.ver-nav {
-    background-color: #fff;
-    border-bottom: 1px solid #e5ecec;
-    height: 81px;
-}
-
-.download-btn {
-    padding: 6px 15px 0px 0px;
-}
-
-.download-btn:hover {
-    color: #2dabab;
-}
-
-.ver-nav li a {
-    color: #7c7c7c !important;
-}
-
-.line-height {
-    line-height: 81px;
-}
-
-.line-height .navbar-brand {
-    margin: 0px;
-}
-
-.navbar-brand {
-    padding: 0 !important;
-    margin: 0px !important;
-    text-align: center;
-    width: 100%;
-}
-
-.line-height .navbar-expand-md .navbar-nav .nav-link {
-    padding-left: 0px;
-}
-
-.list-2 {
-    display: block;
-    height: 0px !important;
-    line-height: 0px !important;
-    font-size: .8rem;
-    margin: 4px 0px 0px 2px;
-}
-
-.name-size {
-    font-size: 1.5rem;
-    color: #0099cc;
-}
-
-.set-positon {
-    position: relative;
-}
-
-.show-menu {}
-
-.rem1{
-    font-size: 1rem;
-}
-a.rem1:hover, a.rem1:hover i {
-    color: #0099cc;
-}
-.fixed-nav {
-    position: relative;
-    min-height: calc(100vh - 10px);
-    z-index: 50;
-    margin-right: 0px;
-    padding: 0px;
-    background-color: #fff;
-    border-right: 1px solid #e6efef;
-}
-
-.set-abslt {
-    /* position: absolute; */
-}
-
-.nav-hor {
-    /* position: fixed; */
-    background-color: #fff;
-}
-
-.nav-hor li {
-    padding: 0px 30px 0px;
-    border-bottom: 1px solid #e6efef;
-    transition: border-left .2s;
-    transition-duration: .2s;
-    transition-timing-function: linear;
-    transition-delay: .07s;
-}
-
-.nav-hor li a {
-    width: 100%;
-    color: #7c7c7c;
-}
-
-.dashboard {
-    position: relative;
-    /* overflow: hidden;
-    box-sizing: border-box; */
-}
-
-.dashboard .dashboard-cont{
-    /* position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: -17px;
-    overflow-y: scroll;
-    padding: 0px 15px; */
-}
-.cont-style-parent{
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-.cont-style-cont{
-    /* position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0px; */
-    overflow-y: scroll;
-    /* padding: 0px 15px;
-    padding-top: 0px; */
-}
 .title-style {
-    padding: 15px 15px;
-    background-color: #0099cc;
-    border-bottom: 1px solid #e5ecec;
-    color: #fff !important;
-    margin-bottom: 10px;
+  padding: 15px 15px;
+  background-color: #0099cc;
+  border-bottom: 1px solid #e5ecec;
+  color: #fff !important;
+  margin-bottom: 10px;
 }
-.set-rout-ele {
-    position: static;
+.title-style h2 {
+  color: #fff !important;
+  margin-bottom: 0px !important;
 }
-
-.set-both>div {
-    display: inline-block;
+.title-style .remove-pad-marg h2 {
+  margin-bottom: 0px !important;
+  font-size: 1.6rem;
 }
-
-.active-link {
-    background-color: #fafafa;
-    font-weight: 500;
-    color: blue;
-    border-left: 2px solid #0099cc;
-    border-right: 1px solid #e6efef;
+.nav-link.nav-link-padd {
+  padding: 1rem 0px;
 }
-
-.active-link:hover {
-    border-left: 2px solid #0099cc !important;
-    border-right: 1px solid #e6efef;
+.logo-icon {
+  width: 75px;
+  max-width: 75px;
+  margin: 0px auto;
+  margin-right: 0;
+  position: relative;
 }
-
-.nav-hor li:hover {
-    background-color: #f3f3f3;
-    border-left: 2px solid #795548;
-    border-right: 1px solid #e6efef;
+h4 a:hover {
+  color: #0099cc;
 }
-
-
-/* media query */
-
-
-/* Extra small devices (phones, 600px and down) */
-
-@media only screen and (max-width: 600px) {
-
-    .collapse:not(.show) {
-        display: inline-block;
-    }
-    .show-menu {
-        /* display: none !important; */
-    }
-    .navbar-nav {
-        display: inline-flex;
-        flex-direction: column;
-    }
-    .navbar-nav.ul li.nav-item {
-        display: inline-block;
-    }
-    .navbar-brand {
-        display: inline-block;
-        margin-right: 0;
-    }
-    div#collapsibleNavbar ul {
-        width: 50%;
-    }
-    .name-size {
-        font-size: 1rem;
-    }
-    .list-2 {
-        font-size: .6rem;
-    }
-    .nav-link-padd {
-        vertical-align: middle;
-        padding: 20px 0px 20px 8px !important;
-    }
-    .header-right {
-        padding: 31px 20px;
-    }
-    .header-right a{
-        padding: 0;
-        font-size: .8rem;
-    }
-    .nav-hor li {
-        padding: 0px 0px;
-        text-align: center;
-    }
-}
-
-.titleName{
-    font-size: 1rem;
-}
-
-
-/* profile mdoal */
-#profileModalCenter .full-size{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-#profileModalCenter .modal-header {
-    padding: 2px;
-    border-radius: 10px;
-}
-
-#profileModalCenter .modal-content {
-    border-radius: 10px;
-}
-
-#profileModalCenter button.close{
-    position: absolute;
-    right: 7px;
-    top: 0px;
-    outline: none;
-}
-
-/* profile modal end here */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-
-@media only screen and (min-width: 600px) {}
-
-
-/* Medium devices (landscape tablets, 768px and up) */
 
 @media only screen and (max-width: 768px) {
-    .show-menu {
-        /* display: none !important; */
-        background-color: #fff;
-    }
-    .titleName{
-        display: none;
-    }
-    .nav-hor li{
-        padding: 0px 0px;
-        text-align: center;
-    }
+  .skill-board blockquote h3 {
+    font-size: 1.3rem;
+  }
+  .italic {
+    font-size: 0.9rem;
+  }
+  .italic sup {
+    font-size: 0.7rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.99rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .exp-list li {
+    font-size: 0.95rem;
+  }
+  .skill-board blockquote h3 {
+    font-size: 1.2rem !important;
+  }
+  .italic {
+    font-size: 1.1rem !important;
+  }
+  .headline h3 {
+    font-size: 1.1rem !important;
+  }
+  blockquote h3 a {
+    font-size: 1rem !important;
+  }
+  blockquote h3 span a {
+    font-size: 0.8rem !important;
+  }
+  .title-style .remove-pad-marg h2 {
+    font-size: 1.3rem !important;
+  }
 }
 
+::selection {
+  color: #fff;
+  background-color: #6f6c6c;
+}
+.skill-board-white {
+  background-color: #ffffff;
+  border-radius: 2px;
+  padding: 18px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  width: 100%;
+}
+.cont-style {
+  min-height: calc(100vh - 10px);
+}
+.margin-bottom {
+  margin-bottom: 25px !important;
+}
+.cont-style-parent {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.cont-style-cont {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0px;
+  overflow-y: scroll;
+  padding: 0px 15px;
+  padding-top: 0px;
+  padding-bottom: 165px;
+}
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* hide scroll bar */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
 
-@media only screen and (min-width: 992px) {}
+/* snow effect css start here */
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    bottom,
+    rgb(105, 173, 212) 0%,
+    rgb(23, 82, 145) 84%
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    rgb(105, 173, 212) 0%,
+    rgb(23, 82, 145) 84%
+  );
+  background-image: -moz-linear-gradient(
+    bottom,
+    rgb(105, 173, 212) 0%,
+    rgb(23, 82, 145) 84%
+  );
+  background-image: -webkit-linear-gradient(
+    bottom,
+    rgb(105, 173, 212) 0%,
+    rgb(23, 82, 145) 84%
+  );
+  background-image: -ms-linear-gradient(
+    bottom,
+    rgb(105, 173, 212) 0%,
+    rgb(23, 82, 145) 84%
+  );
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top, color-stop(0, rgb(105, 173, 212)),
+    color-stop(0.84, rgb(23, 82, 145))
+  );
+  background: transparent;
+  pointer-events: none;
+}
 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-
-@media only screen and (min-width: 1200px) {}
-
+/* snow effect css end here */
+.modal-backdrop.fade.show {
+  display: none;
+}
+.modal-open .modal{
+  background-color: #96969663 !important;
+}

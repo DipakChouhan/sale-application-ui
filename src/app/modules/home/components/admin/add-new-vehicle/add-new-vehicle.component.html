@@ -1,199 +1,286 @@
 <div class="conatiner-fluid title-style">
-  <div class="remove-pad-marg">
+  <div class="row remove-pad-marg">
     <div class="">
-      <h2>Page name</h2>
+      <h2>Add New Vehicle</h2>
     </div>
   </div>
 </div>
-<div class="container-width cont-style cont-style-parent">
+<div class="container cont-style cont-style-parent">
   <div class="cont-style-cont">
     <div class="row remove-pad-marg">
       <div class="headline col-lg-12 skill-board margin-bottom">
-        <div class="skill-board-white">
-          <form class="form-horizontal" role="form">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label class="text-left" for="carName">Car Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="carName"
-                  placeholder="Car Name"
-                  required=""
-                  maxlength="64"
-                  onKeyPress="if(this.value.length==45) return false;"
-                  ng-pattern-restrict
-                />
+        <div class="row">
+          <div class="skill-board-white">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="row margin-bottom">
+                    <form
+                      class="form-horizontal"
+                      role="form"
+                      [formGroup]="addVehicleForm"
+                      (ngSubmit)="onAddVehicle()"
+                    >
+                      <h3 class="text-center">Add New Car Details Here</h3>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="carName"
+                            >Car Name</label
+                          >
+                          <input
+                            formControlName="vehicleName"
+                            type="text"
+                            class="form-control"
+                            name="carName"
+                            placeholder="Car Name"
+                            required=""
+                            maxlength="64"
+                            onKeyPress="if(this.value.length==45) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="carYear">Year</label>
+                          <input
+                            formControlName="vehicleYear"
+                            type="text"
+                            class="form-control"
+                            name="carYear"
+                            placeholder="2020"
+                            required=""
+                            maxlength="4"
+                            onKeyPress="if(this.value.length==4) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="carBrand"
+                            >Car Brand</label
+                          >
+                          <input
+                            formControlName="vehicleBrand"
+                            type="text"
+                            class="form-control"
+                            name="carBrand"
+                            placeholder="Brand Name"
+                            required=""
+                            maxlength="64"
+                            onKeyPress="if(this.value.length==64) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="carMileage"
+                            >Current Mileage(km/l)</label
+                          >
+                          <input
+                            formControlName="vehicleMileage"
+                            type="text"
+                            class="form-control"
+                            name="carMileage"
+                            placeholder="0"
+                            required=""
+                            maxlength="3"
+                            onKeyPress="if(this.value.length==3) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="vehicleLowerPrice"
+                            >Vehicle Lower Price</label
+                          >
+                          <input
+                            formControlName="vehicleLowerPrice"
+                            type="text"
+                            class="form-control"
+                            name="vehicleLowerPrice"
+                            placeholder="00000"
+                            required=""
+                            maxlength="10"
+                            onKeyPress="if(this.value.length==10) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="vehicleUpperPrice"
+                            >Vehicle Upper Price</label
+                          >
+                          <input
+                            formControlName="vehicleUpperPrice"
+                            type="text"
+                            class="form-control"
+                            name="vehicleUpperPrice"
+                            placeholder="00000"
+                            required=""
+                            maxlength="10"
+                            onKeyPress="if(this.value.length==10) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="carTransmission"
+                            >Transmission Type</label
+                          >
+                          <input
+                            formControlName="vehicleTransmissionType"
+                            type="text"
+                            class="form-control"
+                            name="carTransmission"
+                            placeholder="Manual/Automatic/Both"
+                            required=""
+                            maxlength="16"
+                            onKeyPress="if(this.value.length==16) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="carOwners"
+                            >No. of Owners</label
+                          >
+                          <input
+                            formControlName="vehicleOwnersCount"
+                            type="text"
+                            class="form-control"
+                            name="carOwners"
+                            placeholder="1/2/3/4"
+                            required=""
+                            maxlength="1"
+                            onKeyPress="if(this.value.length==1) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="carDriven"
+                            >KM Driven</label
+                          >
+                          <input
+                            formControlName="vehicleKmDriven"
+                            type="text"
+                            class="form-control"
+                            name="carDriven"
+                            placeholder="47,000"
+                            required=""
+                            maxlength="10"
+                            onKeyPress="if(this.value.length==10) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="carColor"
+                            >Car Color</label
+                          >
+                          <input
+                            formControlName="vehicleColor"
+                            type="text"
+                            class="form-control"
+                            name="carColor"
+                            placeholder="Color Name"
+                            required=""
+                            maxlength="64"
+                            onKeyPress="if(this.value.length==64) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="carVariant"
+                            >Variant</label
+                          >
+                          <input
+                            formControlName="vehicleVarient"
+                            type="text"
+                            class="form-control"
+                            name="carVariant"
+                            placeholder="Smiles 5 Seater Standard"
+                            required=""
+                            maxlength="64"
+                            onKeyPress="if(this.value.length==64) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label class="text-left" for="carFuel">Fuel</label>
+                          <input
+                            formControlName="vehicleFuel"
+                            type="text"
+                            class="form-control"
+                            name="carFuel"
+                            placeholder="CNG & Hybrids"
+                            required=""
+                            maxlength="20"
+                            onKeyPress="if(this.value.length==20) return false;"
+                            ng-pattern-restrict
+                          />
+                        </div>
+                        <div class="form-group col-md-12">
+                          <label class="text-left" for="carDescription"
+                            >Description</label
+                          >
+                          <textarea
+                            type="text"
+                            formControlName="vehicleDescription"
+                            class="form-control"
+                            name="carDescription"
+                            placeholder="Good condition"
+                            required=""
+                            maxlength="1000"
+                            onKeyPress="if(this.value.length==1000) return false;"
+                            ng-pattern-restrict
+                          ></textarea>
+                        </div>
+                        <div class="form-group col-md-12">
+                          <label class="text-left" for="vehicleSpecifications"
+                            >Extra Specification</label
+                          >
+                          <textarea
+                            formControlName="vehicleSpecifications"
+                            type="text"
+                            class="form-control"
+                            name="vehicleSpecifications"
+                            placeholder='{"name":"value", "name2":"value2",...}'
+                            required=""
+                            maxlength="1000"
+                            onKeyPress="if(this.value.length==1000) return false;"
+                            ng-pattern-restrict
+                          ></textarea>
+                        </div>
+                      </div>
+                      <button
+                        class="subscribe btn btn-primary btn-block"
+                        type="submit"
+                      >
+                        Add Car
+                      </button>
+                    </form>
+                    <form
+                      class="form-horizontal"
+                      role="form"
+                      (ngSubmit) = "onVehicleImagesSubmit()"
+                    >
+                      <h3 class="text-center"><b>Step 2: </b>Choose files to upload</h3>
+                      
+                      <div class="form-group">
+                        <label for="file">File</label>
+                        <!-- <input type="file" multiple (change)="detectFiles($event)"> -->
+                        <input type="file" class="form-control-file border" multiple  (change) = onFileChanged($event)>
+                      </div>
+                      <button class="btn btn-primary" type="submit">
+                        Submit
+                      </button>
+                    </form>
+                  </div>
+                </div>
               </div>
-              <!-- <div class="form-group col-md-6">
-                  <label class="text-left" for="carYear">Year</label>
-                  <input type="text" class="form-control" name="carYear"
-                      placeholder="2019" required="" maxlength="64"
-                      onKeyPress="if(this.value.length==64) return false;"
-                      ng-pattern-restrict>
-              </div> -->
-              <div class="form-group col-md-6">
-                <label class="text-left" for="carYear">Year</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="carYear"
-                  placeholder="2020"
-                  required=""
-                  maxlength="4"
-                  onKeyPress="if(this.value.length==4) return false;"
-                  ng-pattern-restrict
-                />
-              </div>
-              <div class="form-group col-md-6">
-                <label class="text-left" for="carBrand">Car Brand</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="carBrand"
-                  placeholder="Brand Name"
-                  required=""
-                  maxlength="64"
-                  onKeyPress="if(this.value.length==64) return false;"
-                  ng-pattern-restrict
-                />
-              </div>
-              <div class="form-group col-md-6">
-                <label class="text-left" for="carMileage"
-                  >Current Mileage</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  name="carMileage"
-                  placeholder=""
-                  required=""
-                  maxlength="3"
-                  onKeyPress="if(this.value.length==3) return false;"
-                  ng-pattern-restrict
-                />
-              </div>
-              <!-- <div class="form-group col-md-6">
-                  <label class="text-left" for="carTransmission">Transmission</label>
-                  <input type="text" class="form-control" name="carTransmission"
-                      placeholder="Manual" required="" maxlength="64"
-                      onKeyPress="if(this.value.length==64) return false;"
-                      ng-pattern-restrict>
-              </div> -->
-              <div class="form-group col-md-6">
-                <label class="text-left" for="carTransmission"
-                  >Transmission Type</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  name="carTransmission"
-                  placeholder="Manual/Automatic/Both"
-                  required=""
-                  maxlength="16"
-                  onKeyPress="if(this.value.length==16) return false;"
-                  ng-pattern-restrict
-                />
-              </div>
-              <!-- <div class="form-group col-md-6">
-                  <label class="text-left" for="carOwners">No. of Owners</label>
-                  <input type="text" class="form-control" name="carOwners"
-                      placeholder="1" required="" maxlength="64"
-                      onKeyPress="if(this.value.length==64) return false;"
-                      ng-pattern-restrict>
-              </div> -->
-              <div class="form-group col-md-6">
-                <label class="text-left" for="carOwners">No. of Owners</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="carOwners"
-                  placeholder="1/2/3/4"
-                  required=""
-                  maxlength="1"
-                  onKeyPress="if(this.value.length==1) return false;"
-                  ng-pattern-restrict
-                />
-              </div>
-              <div class="form-group col-md-6">
-                <label class="text-left" for="carDriven">KM Driven</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="carDriven"
-                  placeholder="47,000"
-                  required=""
-                  maxlength="10"
-                  onKeyPress="if(this.value.length==10) return false;"
-                  ng-pattern-restrict
-                />
-              </div>
-              <div class="form-group col-md-6">
-                <label class="text-left" for="carColor">Car Color</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="carColor"
-                  placeholder="Black"
-                  required=""
-                  maxlength="64"
-                  onKeyPress="if(this.value.length==64) return false;"
-                  ng-pattern-restrict
-                />
-              </div>
-              <div class="form-group col-md-6">
-                <label class="text-left" for="carVariant">Variant</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="carVariant"
-                  placeholder="Smiles 5 Seater Standard"
-                  required=""
-                  maxlength="64"
-                  onKeyPress="if(this.value.length==64) return false;"
-                  ng-pattern-restrict
-                />
-              </div>
-              <div class="form-group col-md-6">
-                <label class="text-left" for="carFuel">Fuel</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name="carFuel"
-                  placeholder="CNG & Hybrids"
-                  required=""
-                  maxlength="20"
-                  onKeyPress="if(this.value.length==20) return false;"
-                  ng-pattern-restrict
-                />
-              </div>
-              <div class="form-group col-md-6">
-                <label class="text-left" for="carDescription"
-                  >Description</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  name="carDescription"
-                  placeholder="Good condition"
-                  required=""
-                  maxlength="1000"
-                  onKeyPress="if(this.value.length==1000) return false;"
-                  ng-pattern-restrict
-                />
-              </div>
-              <!-- <button class="subscribe btn btn-primary btn-block" type="submit"></button> -->
-              <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Add Car</button>
-                  <button type="button" class="btn btn-primary">Reset</button> -->
-              <!-- <div *ngIf="cardFormVal.invalid" class="alert alert-danger">{{errorMessage}}</div> -->
             </div>
-          </form>
-          <button type="button" class="btn btn-primary">Save Details</button>
-          <button type="button" class="btn btn-primary btn-danger">
-            Reset
-          </button>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <div
+    class="alert alert-success alert-dismissible fade show AlertPosition"
+    *ngIf="showMsg"
+  >
+    <!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+    <strong>Success!</strong> New vehicle added.
   </div>
 </div>

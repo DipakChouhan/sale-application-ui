@@ -1,0 +1,37 @@
+<div class="modal fade" id="vehicleViewModal" *ngIf="vehicle != undefined">
+  <div class="modal-dialog modal-dialog-scrollable modal-xl">
+    <div class="modal-content">
+      <div class="modal-header text-dark">
+        <h4 class="text-center" *ngIf="vehicle != undefined">{{vehicle['vehicleName'] | uppercase}}</h4>
+        <button type="button" class="close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let item of vehicle | keyvalue">
+                    <td *ngIf="item.key != 'vehicleMediaModelList' && item.key != 'vehicleSpecifications'">{{item.key}}</td>
+                    <td class="float-right" *ngIf="item.key != 'vehicleMediaModelList' && item.key != 'vehicleSpecifications'">{{item.value}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="card-columns">
+            <div
+              class="card edit-btn"
+              *ngFor="let item of vehicle.vehicleMediaModelList"
+            >
+              <img
+                class="card-img-top"
+                [src]="
+                  'http://localhost:8082/images' +
+                  item.vehicleMediaEncodedImage
+                "
+                alt="Card image cap"
+              />
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
