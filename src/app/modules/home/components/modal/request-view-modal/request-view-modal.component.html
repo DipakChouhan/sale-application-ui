@@ -1,0 +1,28 @@
+<div class="modal fade" id="requestViewModal" *ngIf="reuest != undefined">
+    <div class="modal-dialog modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+            <div class="modal-header text-dark">
+                <h1>Reuest View</h1>
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <tbody>
+                        <tr *ngFor="let item of reuest | keyvalue">
+                            <td *ngIf="item.key != 'carImages'">{{item.key}}</td>
+                            <td *ngIf="item.key != 'carImages'">{{item.value}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="card-columns">
+                    <div class="card edit-btn" *ngFor="let path of reuest.carImages">
+                        <img class="card-img-top" [src]="
+                    'http://localhost:8082/images' + path" alt="Card image cap" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

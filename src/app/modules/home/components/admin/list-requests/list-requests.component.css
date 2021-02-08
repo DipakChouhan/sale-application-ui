@@ -86,3 +86,14 @@ button:not(.editBtn) {
 button:focus {
     outline: none;
 }
+.viewBtn{
+    background-color: #77a7f3;
+    color: #fff;
+    border-radius: 10px;
+    display: inline;
+    padding: 1px 10px;
+    border: none;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+}

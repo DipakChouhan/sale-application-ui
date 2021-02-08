@@ -15,6 +15,7 @@ import { ListVehiclesComponent } from './components/admin/list-vehicles/list-veh
 import { ListRequestsComponent } from './components/admin/list-requests/list-requests.component';
 import { ListComplaintsComponent } from './components/admin/list-complaints/list-complaints.component';
 import { VehicleViewModalComponent } from './components/modal/vehicle-view-modal/vehicle-view-modal.component';
+import { RequestViewModalComponent } from './components/modal/request-view-modal/request-view-modal.component';
 
 @NgModule({
   declarations: [ UserComponent, LoginComponent,
@@ -23,7 +24,8 @@ import { VehicleViewModalComponent } from './components/modal/vehicle-view-modal
     ListVehiclesComponent,
     ListRequestsComponent,
     ListComplaintsComponent,
-    VehicleViewModalComponent],
+    VehicleViewModalComponent,
+    RequestViewModalComponent],
   imports: [
     HomeRoutingModule,
     SharedModule,
