@@ -15,38 +15,22 @@
                           <div class="skill-board-white">
                               <div class="col-lg-12">
                                   <div class="table-responsive">
-                                      <p>List of Repuest</p>
+                                      <p>List of Request</p>
                                       <table class="table">
                                           <thead>
                                               <tr>
-                                                  <th scope="col">Sr. No.</th>
-                                                  <th scope="col">Name</th>
-                                                  <th scope="col">Email</th>
-                                                  <th scope="col">Mobile No.</th>
-                                                  <th scope="col">Status</th>
+                                                  <th scope="col">Ticket Id</th>
+                                                  <th scope="col">Complaint Id</th>
+                                                  <th scope="col">Complaint Type</th>
+                                                  <th scope="col">Complaint Description</th>
                                               </tr>
                                           </thead>
                                           <tbody>
-                                              <tr>
-                                                  <th scope="row">1</th>
-                                                  <td>Mark</td>
-                                                  <td>Otto@gm.com</td>
-                                                  <td>2882826626</td>
-                                                  <td>Pending</td>
-                                              </tr>
-                                              <tr>
-                                                  <th scope="row">2</th>
-                                                  <td>Max</td>
-                                                  <td>Otto@gm.com</td>
-                                                  <td>2882826626</td>
-                                                  <td>Block</td>
-                                              </tr>
-                                              <tr>
-                                                  <th scope="row">3</th>
-                                                  <td>Ogy</td>
-                                                  <td>Otto@gm.com</td>
-                                                  <td>2882826626</td>
-                                                  <td>Approved</td>
+                                              <tr *ngFor="let item of complaints">
+                                                  <th scope="row">{{ item.complaintTicketId }}</th>
+                                                  <td>{{ item.complaintId }}</td>
+                                                  <td>{{ item.complaintType }}</td>
+                                                  <td>{{ item.complaintDescription }}</td>
                                               </tr>
                                           </tbody>
                                       </table>

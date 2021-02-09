@@ -12,6 +12,9 @@ export class AdminService {
   getVehicleList() {
     return this.httpClient.get("http://localhost:8082/user/getAllCarDetails?pageNo=0&pageSize=1000000");
   }
+  getComplaintsList() {
+    return this.httpClient.get("http://localhost:8082/admin/getAllComplaints?pageNo=0&pageSize=1000000");
+  }
   getAllSellRequests() {
     return this.httpClient.get("http://localhost:8082/admin/getAllSellCarRequests?pageNo=0&pageSize=1000000");
   }
