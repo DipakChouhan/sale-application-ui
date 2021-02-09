@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: '', component: UserComponent, children: []},
   {path: 'login', component: LoginComponent},
   {path: 'admin', component: AdminComponent, children: [
+    // {path: '', component: AddNewVehicleComponent},
       {path: 'addNewVehicle', component: AddNewVehicleComponent},
       {path: 'listVehicles', component: ListVehiclesComponent},
       {path: 'listRequests', component: ListRequestsComponent},

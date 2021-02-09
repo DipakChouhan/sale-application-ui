@@ -11,8 +11,8 @@
         <table class="table">
             <tbody>
                 <tr *ngFor="let item of vehicle | keyvalue">
-                    <td *ngIf="item.key != 'vehicleMediaModelList' && item.key != 'vehicleSpecifications'">{{item.key}}</td>
-                    <td class="float-right" *ngIf="item.key != 'vehicleMediaModelList' && item.key != 'vehicleSpecifications'">{{item.value}}</td>
+                    <td *ngIf="item.key != 'vehicleMediaModelList' && item.key != 'vehicleSpecifications'">{{item.key | titlecase }}</td>
+                    <td class="float-right" *ngIf="item.key != 'vehicleMediaModelList' && item.key != 'vehicleSpecifications'">{{item.value | titlecase }}</td>
                 </tr>
             </tbody>
         </table>

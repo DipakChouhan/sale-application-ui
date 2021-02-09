@@ -15,6 +15,7 @@ export class AddNewVehicleComponent implements OnInit {
   subscription: any;
   selectedFiles: File[];
   private savedVehicleId: string;
+  step1: boolean = true;
 
 // file upload
 urls = new Array<string>();
@@ -68,6 +69,7 @@ detectFiles(event) {
       const source = interval(2000);
     const text = 'Your Text Here';
     this.subscription = source.subscribe(val => this.closeAlert());
+    this.step1 = false;
     }, error => {
       // this.dataService.buildModelDataObject(null, null, this, null, error.error.errorMessages);
     });
@@ -90,6 +92,7 @@ detectFiles(event) {
     uploadImageData.append('vehicleEntityId', this.savedVehicleId);
     this.adminService.saveNewVehicleImages(uploadImageData).subscribe(responseData => {
       console.log(responseData);
+      this.step1 = true;
       // this.createUploadVehicleImageForm();
       // this.dataService.buildModelDataObject(null, null, this, responseData['infoMessages'], null);
     }, error => {

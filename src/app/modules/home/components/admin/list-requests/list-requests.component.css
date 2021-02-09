@@ -97,3 +97,11 @@ button:focus {
     vertical-align: middle;
     text-align: center;
 }
+/* .table-responsive {
+    max-height:500px;
+    max-width: 1200px;
+    overflow: scroll;
+} */
+/* .table-responsive table td{
+    min-width: 150px;
+} */
