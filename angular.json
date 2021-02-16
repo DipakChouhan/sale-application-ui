@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "guest-book-ui": {
+    "car-sell-ui": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/guest-book-ui",
+            "outputPath": "dist/car-sell-ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "guest-book-ui:build"
+            "browserTarget": "car-sell-ui:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "guest-book-ui:build:production"
+              "browserTarget": "car-sell-ui:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "guest-book-ui:build"
+            "browserTarget": "car-sell-ui:build"
           }
         },
         "test": {
@@ -114,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "guest-book-ui:serve"
+            "devServerTarget": "car-sell-ui:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "guest-book-ui:serve:production"
+              "devServerTarget": "car-sell-ui:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "guest-book-ui",
+  "defaultProject": "car-sell-ui",
   "cli": {
     "analytics": "3df9027d-8ccf-4b8c-bb7b-436ec6d8ac21"
   }
