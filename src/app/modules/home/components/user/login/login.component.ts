@@ -33,11 +33,9 @@ export class LoginComponent implements OnInit {
   public onSignIn() {
     console.log(this.signInForm.value);
     this.userService.signInUser(this.signInForm.value).subscribe(response => {
-      console.log(response);
-      localStorage.setItem("user_token", response['payloads']);
-      // this.router.navigate(['/home']);
-      // this.router.navigate(['/admin']);
-      console.log('Sign In Form' , this.signInForm.value['email'])
+      console.log(response.headers.get('bearer'));
+      localStorage.setItem("user_token", response.headers.get('bearer'));
+
       this.userService.getUserDetails(this.signInForm.value['email']).subscribe(responseData => {
         console.log('id:' + responseData['payloads'].id);
           localStorage.setItem("name", responseData['payloads'].username);
