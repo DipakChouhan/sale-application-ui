@@ -10,23 +10,23 @@ export class AdminService {
   }
 
   getVehicleList() {
-    return this.httpClient.get("http://18.188.123.203:8082/user/getAllCarDetails?pageNo=0&pageSize=1000000");
+    return this.httpClient.get("https://18.188.123.203:8082/user/getAllCarDetails?pageNo=0&pageSize=1000000");
   }
   getComplaintsList() {
-    return this.httpClient.get("http://18.188.123.203:8082/admin/getAllComplaints?pageNo=0&pageSize=1000000");
+    return this.httpClient.get("https://18.188.123.203:8082/admin/getAllComplaints?pageNo=0&pageSize=1000000");
   }
   getAllSellRequests() {
-    return this.httpClient.get("http://18.188.123.203:8082/admin/getAllSellCarRequests?pageNo=0&pageSize=1000000");
+    return this.httpClient.get("https://18.188.123.203:8082/admin/getAllSellCarRequests?pageNo=0&pageSize=1000000");
   }
   dummyApiCall() {
-    return this.httpClient.get("http://18.188.123.203:8082/user/dummyApiCall");
+    return this.httpClient.get("https://18.188.123.203:8082/user/dummyApiCall");
   }
 
   saveNewVehicleImages(formData: any) {
-    return this.httpClient.post("http://18.188.123.203:8082/admin/saveNewVehicleImages", formData);
+    return this.httpClient.post("https://18.188.123.203:8082/admin/saveNewVehicleImages", formData);
   }
 
   saveNewVehicle(vehicleModel: any) {
-    return this.httpClient.post("http://18.188.123.203:8082/admin/saveNewVehicle", vehicleModel);
+    return this.httpClient.post("https://18.188.123.203:8082/admin/saveNewVehicle", vehicleModel);
   }
 }
