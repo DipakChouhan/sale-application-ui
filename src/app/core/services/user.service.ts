@@ -11,18 +11,18 @@ export class UserService {
     private httpRequestHeaders: HttpHeaders = new HttpHeaders({'No-Auth': 'True'})
 
     registerUser(signUpModel: any) {
-      return this.httpClient.post("http://localhost:8082/security/userDetails/register", signUpModel, {headers: this.httpRequestHeaders});
+      return this.httpClient.post("http://18.188.123.203:8082/security/userDetails/register", signUpModel, {headers: this.httpRequestHeaders});
     }
 
     // signInUser(signInModel: any) {
     //   return this.httpClient.post("http://localhost:8082/login", signInModel);
     // }
     signInUser(signInModel: any) {
-      return this.httpClient.post("http://localhost:8082/security/userDetails/signIn", signInModel, {headers: this.httpRequestHeaders});
+      return this.httpClient.post("http://18.188.123.203:8082/security/userDetails/signIn", signInModel, {headers: this.httpRequestHeaders});
     }
 
     getUserDetails(userEmail: any) {
-      return this.httpClient.post("http://localhost:8082/security/userDetails/getUserDetails", userEmail);
+      return this.httpClient.post("http://18.188.123.203:8082/security/userDetails/getUserDetails", userEmail);
 
     }
 
